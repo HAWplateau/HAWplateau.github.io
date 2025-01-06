@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body setup */
+body {
+    display: grid;
+    align-items:start;
+    align-content: start;
+    grid-auto-flow:column;
+    min-height: 100vh;
+    background: #000;
+    font-family: "Arial";
+    line-height: 1.6;
+    background-color: #000000;
+    place-items:initial;
+}
+
+/* Create a grid container with 2 rows and 2 columns */
+
+
+h1 {
+    font-size: 2rem;
+    h1 {
+        position: sticky;
+        top: 0;
+        background-color: white;  /* Optional, to make the background solid when scrolling */
+        z-index: 100;  /* Ensures the heading stays on top of other content */
+        padding: 10px;  /* Optional, to add some spacing around the heading */
+      }
+}
+
+/* Header */
+header {
+    grid-area: header;
+    background-color: #333;
+    color: white;
+    font-size: larger;
+    padding: 0;
+    text-align: center;
+    grid-auto-rows: max-content;
+    position: sticky;
+
+}
+
+
+.sidebar {
+        width: 220px; /* Fixed width for the sidebar */
+        height: 100%;
+        background-color: #333; /* Dark background */
+        color: white;
+        padding: 20px;
+    }
+
+
+ul li {
+    list-style: none;
+}
+ul li a {
+    position:-webkit-sticky;
+    display: block;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    font-size: 3rem;
+    font-weight: 900;
+    text-decoration: none;
+    line-height: 1.2em;
+}
+
+ul li a:hover {
+    color: #fff;
+    -webkit-text-stroke: 1px #000;
+    transition: 0.5s;
+} 
+
+ul li a:before,
+ul li a:after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+  transition: 0.5s;}
+
+ ul li a:hover:before {
+    color: #f00;
+    z-index: 1;
+    -webkit-text-stroke: 1px #000;
+    transform: translate(10px,-10px);
+}
+ul li a:hover:after {
+    color: #0ff;
+    z-index: 2;
+    -webkit-text-stroke: 1px #000;
+    transform: translate(20px,-20px);
+}
+
+
+
+/* Main content area */
+main {
+    display: grid;
+    grid-template-areas: main;
+    text-align: end;
+    grid-column: 1;
+    grid-column-start: auto;
+    background-color: #fff;
+    padding: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: auto;
+    max-width: 80%;
+    margin-left: 1rem;
+    align-items: row;
+}
+
+
+.image-stack img {
+    display: grid;
+    grid-row: 1;
+    max-width: 30%;
+    z-index: 1; /* Stack images with control */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Optional effects */
+}
+
+
+/* Optional hover effect */
+.image-stack img:hover {
+    transform: scale(1.1);
+    opacity: 1000;
+    margin-right: 20rem;
+    z-index: 1000;
+}
+
+
+
+/* Add some responsiveness for smaller screens */
+@media (max-width: 100%) {
+    .container {
+        grid-template-areas:
+            "header"
+            "main"
+            "sidebar"
+            "footer";
+    }
+}
