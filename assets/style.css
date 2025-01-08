@@ -4,8 +4,79 @@
     box-sizing: border-box;
 }
 
-/* Body setup */
-body {
+.three-col-layout {
+    display: grid;
+    grid-template-columns: 10em minmax(min-content, 1fr) 10em;
+    grid-template-rows: auto;
+    height: 100vh;
+  }
+  
+  header {
+    grid-row: 1;
+    grid-column: 1 / span 3;
+    background-color: rgba(0, 0, 255, 0);
+    background-color: rgba(137, 157, 193, 0);
+    color: rgb(0, 0, 0);
+  }
+
+    h1 {
+        position: sticky;
+        top:auto;
+        color: white;
+        background-color: rgba(0, 0, 0, 0);  /* Optional, to make the background solid when scrolling */
+        z-index: 100;  /* Ensures the heading stays on top of other content */
+        padding: 10px;  /* Optional, to add some spacing around the heading */
+      }
+
+  
+  nav {
+    grid-row: 2;
+    grid-column: 3;
+    
+    
+    background-color: rgba(5, 3, 3, 0);
+  }
+
+   img {
+    display: grid;
+    max-width: 30%;
+    z-index: 1; /* Stack images with control */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Optional effects */
+}
+
+
+/* Optional hover effect */
+img:hover {
+    transform: scale(1.1);
+    opacity: 1000;
+    margin-right: 20rem;
+    z-index: 1000;
+}
+
+  main {
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    margin-top: 5.8rem;
+    margin-left: 2rem;
+  }
+  
+  
+  aside {
+    grid-row: 2;
+    grid-column: 1;
+    background-color: rgba(183, 149, 99, 0);
+  }
+  
+  footer {
+    grid-row: 3;
+    grid-column: 1 / span 3;
+    
+    background-color: rgba(192, 192, 192, 0);
+  }
+  
+  body {
     display: grid;
     align-items:start;
     align-content: start;
@@ -14,133 +85,104 @@ body {
     background: #000;
     font-family: "Arial";
     line-height: 1.6;
-    background-color: #000000;
+    background-color: #00000000;
     place-items:initial;
-}
-
-/* Create a grid container with 2 rows and 2 columns */
-
-
-h1 {
-    font-size: 2rem;
-    h1 {
-        position: sticky;
-        top: 0;
-        background-color: white;  /* Optional, to make the background solid when scrolling */
-        z-index: 100;  /* Ensures the heading stays on top of other content */
-        padding: 10px;  /* Optional, to add some spacing around the heading */
-      }
-}
-
-/* Header */
-header {
-    grid-area: header;
-    background-color: #333;
-    color: white;
-    font-size: larger;
-    padding: 0;
-    text-align: center;
-    grid-auto-rows: max-content;
-    position: sticky;
 
 }
 
+html {
+  background-image: url(img/plateau_background.png);
+  -webkit-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top!important;
+  background-color: #000;
+  background-attachment: fixed;
 
-.sidebar {
-        width: 220px; /* Fixed width for the sidebar */
-        height: 100%;
-        background-color: #333; /* Dark background */
-        color: white;
-        padding: 20px;
-    }
+}
 
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 2rem;
+}
 
 ul li {
-    list-style: none;
+  margin: 0;
+  padding: 0;
 }
+
 ul li a {
-    position:-webkit-sticky;
-    display: block;
-    color: transparent;
-    -webkit-text-stroke: 1px #fff;
-    font-size: 3rem;
-    font-weight: 900;
-    text-decoration: none;
-    line-height: 1.2em;
+  position: fixed; /* Fixes the element relative to the viewport */
+  top: 0; /* Positions the element at the top of the viewport */
+  left: 0; /* Adjust as needed to position horizontally */
+  width: 100%; /* Ensures the link spans the full width */
+  display: block;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  color: transparent;
+  -webkit-text-stroke: 0.5px #fff;
+  font-size: 3rem;
+  padding: 0.5rem 1rem;
+  font-weight: 900;
+  font-family: 'Affigere-Regular', sans-serif;
+  text-decoration: none;
+  line-height: 1rem; /* Corrected invalid value */
+  background-color: rgba(0, 0, 0, 0); /* Optional: Adds a background for better visibility */
+  z-index: 1000; /* Ensures the element stays above other content */
 }
 
 ul li a:hover {
-    color: #fff;
-    -webkit-text-stroke: 1px #000;
-    transition: 0.5s;
-} 
+  color: #fff;
+  -webkit-text-stroke: 1px #000;
+  transition: 0.5s;
+}
 
 ul li a:before,
 ul li a:after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-  transition: 0.5s;}
-
- ul li a:hover:before {
-    color: #f00;
-    z-index: 1;
-    -webkit-text-stroke: 1px #000;
-    transform: translate(10px,-10px);
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
 }
+
+ul li a:hover:before {
+  color: #f00;
+  z-index: 1;
+  -webkit-text-stroke: 1px #000;
+  transform: translate(10px, -10px);
+}
+
 ul li a:hover:after {
-    color: #0ff;
-    z-index: 2;
-    -webkit-text-stroke: 1px #000;
-    transform: translate(20px,-20px);
-}
-
-
-
-/* Main content area */
-main {
-    display: grid;
-    grid-template-areas: main;
-    text-align: end;
-    grid-column: 1;
-    grid-column-start: auto;
-    background-color: #fff;
-    padding: 3px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    height: auto;
-    max-width: 80%;
-    margin-left: 1rem;
-    align-items: row;
-}
-
-
-.image-stack img {
-    display: grid;
-    grid-row: 1;
-    max-width: 30%;
-    z-index: 1; /* Stack images with control */
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Optional effects */
-}
-
-
-/* Optional hover effect */
-.image-stack img:hover {
-    transform: scale(1.1);
-    opacity: 1000;
-    margin-right: 20rem;
-    z-index: 1000;
-}
-
-
-
-/* Add some responsiveness for smaller screens */
-@media (max-width: 100%) {
-    .container {
-        grid-template-areas:
-            "header"
-            "main"
-            "sidebar"
-            "footer";
-    }
+  color: #0ff;
+  z-index: 2;
+  -webkit-text-stroke: 1px #000;
+  transform: translate(20px, -20px);
 }
