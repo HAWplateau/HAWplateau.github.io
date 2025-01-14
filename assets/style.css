@@ -16,17 +16,19 @@
   }
 
   img {
-    display: grid;
-    grid-auto-flow: dense;
-    max-width: 30%;
-    max-height: 10%;
+    display: inline-block;
+    max-width: 10%;
+    max-height: auto;
+    align-content: center;
     position:relative;
     border: solid;
-    border-width: 1.5rem;
+    block-size: auto;
     border-color:#00000000 ;
     z-index: 1; /* Stack images with control */
     transition: transform 0.3s ease, opacity 0.3s ease; /* Optional effects */
 }
+
+::content
 
 /* Optional hover effect */
 img:hover {
@@ -43,13 +45,49 @@ img:hover {
   gap: 15px;
 }
 
+.tech-slideshow {
+  height: auto;
+  max-width: auto;
+  margin: 0 auto;
+  position: relative;
+  transform: translate3d(0, 0, 0);
+}
+
+.tech-slideshow > div {
+  height: 200px;
+  width: 2526px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transform: translate3d(0, 0, 0);
+}
+.tech-slideshow .mover-1 {
+  animation: moveSlideshow 12s linear infinite;
+}
+.tech-slideshow .mover-2 {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  background-position: 0 -200px;
+  animation: moveSlideshow 15s linear infinite;
+}
+.tech-slideshow:hover .mover-2 {
+  opacity: 1;
+}
+
+@keyframes moveSlideshow {
+  50% { 
+    transform: translateX(-66.6666%);  
+  }
+}
+
   main {
     display: grid;
     text-align: start;
     align-content: center;
     align-items: center;
     align-self: center;
-    background-color: rgba(55, 0, 255, 0.185);
+    background-color: rgba(55, 0, 255, 0);
     margin-top: 5.8rem;
     margin-left: 0rem;
     width: 80%;
@@ -59,7 +97,7 @@ img:hover {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 5rem;
+    height: 2.75rem;
     background-color: rgba(158, 158, 158, 0.328); /* Semi-transparent background */
     color: rgb(255, 255, 255);
     padding: 10px;
@@ -91,7 +129,7 @@ img:hover {
     background-repeat: no-repeat;
     background-position: top!important;
     background-attachment: fixed;
-    font-family: "Bonbance",sans-serif;
+    font-family: "Affigere";
     align-content: center;
     overflow-x: hidden;
   
@@ -141,7 +179,7 @@ ul li a {
   left: 0; /* Adjust as needed to position horizontally */
   width: 100%; /* Ensures the link spans the full width */
   display: block;
-  margin-top: 1rem;
+  margin-top: 0.6rem;
   margin-left: 0rem;
   color: transparent;
   -webkit-text-stroke: 0.5px #fff;
@@ -154,6 +192,10 @@ ul li a {
   line-height: 1rem; /* Corrected invalid value */
   background-color: rgba(56, 86, 255, 0); /* Optional: Adds a background for better visibility */
   z-index: 1000; /* Ensures the element stays above other content */
+}
+
+p{
+  font-family: "Affigere";
 }
 
 ul li a:hover {
