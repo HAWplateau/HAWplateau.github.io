@@ -1,0 +1,142 @@
+* {
+    margin: 0rem;
+    padding: 0;
+    box-sizing: content-box;
+  }
+  
+  html {
+    margin-top: 2rem;
+  }
+  
+  body {
+    border-width: 0rem;
+    align-items: end;
+    justify-content: space-between;
+    max-width: 100%;
+    overflow: auto;
+    margin: 10rem;
+  }
+
+  .photos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 0px;
+  }
+  
+  .photos img {
+    width: 300px;
+    height: 300px;
+    display: grid; 
+    grid-area: auto;
+    flex-shrink: 50%;
+    max-height: 500px;
+    margin: -3rem;
+    gap: 0;
+    z-index: 1;
+    position: relative;
+    opacity: 100%;
+    transition: transform 0.3s ease, opacity 0.3s ease, z-index 0s;
+    justify-content: space-evenly;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    aspect-ratio: 1 / 1;
+    filter: grayscale(100%);
+  
+  }
+  
+  .photos img:hover{
+    height: auto;
+    width: auto;
+    filter: blur(0px);
+    border-radius: 0%;
+    opacity: 100%;
+    position: fixed;
+    scale: 1.5;
+    top: 30%;
+    left: 30%;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    margin: -3rem;
+  }
+  
+  h2 {
+    margin-right: 0rem;
+    position: relative;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: "Jakob";
+  }
+  
+  ul li {
+    margin: 2;
+    padding: 0;
+  }
+  
+  ul li a {
+    position: fixed;
+    margin-top: 1rem;
+    top: 0; 
+    left: 0;
+    width: fit-content; 
+    display: block;
+    margin-top: 0.6rem;
+    margin-left: 0rem;
+    color: transparent;
+    -webkit-text-stroke: 0.5px #000000;
+    background-position-y:top ;
+    font-size: 2rem;
+    color: rgba(0, 255, 255, 0.52);
+    padding: 0.5rem 1.2rem;
+    font-weight: 900;
+    font-family: "jakob";
+    text-decoration: none;
+    line-height: 2rem; 
+    background-color: rgba(0, 0, 0, 0.864); 
+    z-index: 1000;
+  }
+  
+  p{
+    font-family: "Jakob";
+    font-weight: 50;
+    font-size: 2rem;
+  }
+  
+  ul li a:hover {
+    color: #000000;
+    -webkit-text-stroke: 1px #ffffff;
+    transition: 0.5s;
+  }
+  
+  ul li a:before,
+  ul li a:after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+  }
+  
+  ul li a:hover:before {
+    color: #f00;
+    z-index: 1;
+    -webkit-text-stroke: 1px #000;
+    transform: translate(10px, -10px);
+  }
+  
+  ul li a:hover:after {
+    color: #0ff;
+    z-index: 2;
+    -webkit-text-stroke: 1px #000;
+    transform: translate(20px, -20px);
+  }
+  
