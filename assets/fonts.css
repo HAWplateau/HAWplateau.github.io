@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Affigere";
-  src: url('./fonts/Affigere-Regular.woff2') format('woff2'),
-       url('./fonts/Affigere-Regular.woff') format('woff');
+  src: url('./fonts/Affigere-Regular.woff') format('woff'),
+       url('./fonts/Affigere-Regular.woff2') format('woff2');
   font-weight: 200;
   font-style: normal;
 }
