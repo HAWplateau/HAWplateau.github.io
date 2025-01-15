@@ -9,11 +9,22 @@ html {
 }
 
 body {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns: left and right halves */
   border-width: 0rem;
-  align-items: end;
-  justify-content: space-between;
+  align-items: start; /* Align content at the start */
+  justify-content: start; /* Align grid items horizontally */
   max-width: 100%;
   overflow: auto;
+}
+
+
+
+main {
+  background-color: rgba(255, 0, 0, 0);
+  grid-column: 2; /* Place main section in the second (right) column */
+  height: 100vh; /* Make sure it spans the full height of the viewport */
+  width: 100%; /* Ensure it fills the column */
 }
 
 .photos {
@@ -28,7 +39,8 @@ body {
 .photos img {
   width: 300px;
   height: 300px;
-  display: grid; 
+  display: grid;
+  grid-column-start: 2; 
   grid-area: auto;
   flex-shrink: 50%;
   max-height: 500px;
@@ -58,10 +70,16 @@ body {
   position: fixed;
   scale: 1.5;
   top: 30%;
-  left: 30%;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  left: 20%;
   z-index: 100;
   margin: -3rem;
+  box-shadow:
+  0 1.4px 1.7px rgba(0, 0, 0, 0.017),
+  0 3.3px 4px rgba(0, 0, 0, 0.024),
+  0 6.3px 7.5px rgba(0, 0, 0, 0.03),
+  0 11.2px 13.4px rgba(0, 0, 0, 0.036),
+  0 20.9px 25.1px rgba(0, 0, 0, 0.043),
+  0 50px 60px rgba(0, 0, 0, 0.06);
 }
 
 h2 {
