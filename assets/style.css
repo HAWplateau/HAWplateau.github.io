@@ -43,7 +43,7 @@ img:hover {
 
 .photos img {
   object-fit: cover;
-  opacity: 50%; /* Bild unsichtbar */
+  opacity: ; /* Bild unsichtbar */
   transition: opacity 0.5s ease-in-out;
 }
 
@@ -63,8 +63,6 @@ img:hover {
   opacity: 1; /* Bild sichtbar beim Hover */
 }
 
-.photos img:hover::before {
-}
 
 h2 {
   margin-right: 1rem;
