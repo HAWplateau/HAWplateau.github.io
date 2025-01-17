@@ -15,6 +15,8 @@
     max-width: 100%;
     overflow: auto;
     margin: 10rem;
+    font-family: "FT88-Serif";
+    font-weight: 200;
   }
 
   .photos {
@@ -75,7 +77,6 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    font-family: "Jakob";
   }
   
   ul li {
@@ -99,7 +100,6 @@
     color: rgba(0, 255, 255, 0.52);
     padding: 0.5rem 1.2rem;
     font-weight: 900;
-    font-family: "jakob";
     text-decoration: none;
     line-height: 2rem; 
     background-color: rgba(0, 0, 0, 0.864); 
@@ -107,7 +107,7 @@
   }
   
   p{
-    font-family: "Jakob";
+    font-family: "FT88-Serif";
     font-weight: 50;
     font-size: 2rem;
   }
