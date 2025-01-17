@@ -33,6 +33,26 @@ body {
 
 }
 
+.overlay {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+  z-index: 100;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: rgb(255, 0, 0);
+  font-size: 20px;
+  position: relative;
+}
+
 
 h2 {
   margin-right: 0rem;
@@ -58,7 +78,7 @@ ul li a {
   left: 0;
   width: fit-content; 
   display: block;
-  margin-top: 0.6rem;
+  margin-top: 0.8rem;
   margin-left: 0rem;
   color: transparent;
   -webkit-text-stroke: 0.5px #000000;

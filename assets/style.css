@@ -66,6 +66,8 @@ main {
 
 .photos img:hover{
   height: auto;
+  display: flex;
+  flex-wrap: wrap;
   width: auto;
   filter: blur(0px);
   border-radius: 0%;
@@ -108,7 +110,7 @@ ul li a {
   left: 0;
   width: fit-content; 
   display: block;
-  margin-top: 0.6rem;
+  margin-top: 0.8rem;
   margin-left: 0rem;
   color: transparent;
   -webkit-text-stroke: 0.5px #000000;
@@ -116,11 +118,13 @@ ul li a {
   font-size: 2rem;
   color: rgba(0, 255, 255, 0.52);
   padding: 0.5rem 1.2rem;
+  background-size: 1rem;
   font-weight: 900;
   text-decoration: none;
   line-height: 2rem; 
   background-color: rgba(0, 0, 0, 0.864); 
   z-index: 1000;
+  background-size: 10%;
 }
 
 
