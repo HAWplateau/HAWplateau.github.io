@@ -15,9 +15,9 @@ body {
   align-items: start; /* Align content at the start */
   justify-content: start; /* Align grid items horizontally */
   max-width: 100%;
-  font-family: "FT88-Serif", serif;
-  font-weight: 200;
+  font-family: "Caramel";
   overflow: auto;
+  letter-spacing: 1rem;
 }
 
 
@@ -55,6 +55,7 @@ main {
   justify-content: space-evenly;
   object-fit: cover;
   border-radius: 50%;
+  border-spacing: 0.5rem;
   border: 2px solid #000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
@@ -78,13 +79,6 @@ main {
   left: 20%;
   z-index: 100;
   margin: -3rem;
-  box-shadow:
-  0 1.4px 1.7px rgba(0, 0, 0, 0.017),
-  0 3.3px 4px rgba(0, 0, 0, 0.024),
-  0 6.3px 7.5px rgba(0, 0, 0, 0.03),
-  0 11.2px 13.4px rgba(0, 0, 0, 0.036),
-  0 20.9px 25.1px rgba(0, 0, 0, 0.043),
-  0 50px 60px rgba(0, 0, 0, 0.06);
 }
 
 h2 {
@@ -113,24 +107,24 @@ ul li a {
   margin-top: 0.8rem;
   margin-left: 0rem;
   color: transparent;
-  -webkit-text-stroke: 0.5px #000000;
+  -webkit-text-stroke: 0.5px #ffffff;
   background-position-y:top ;
   font-size: 2rem;
-  color: rgba(0, 255, 255, 0.52);
+  color: hsla(0, 0%, 100%, 0);
   padding: 0.5rem 1.2rem;
   background-size: 1rem;
-  font-weight: 900;
   text-decoration: none;
   line-height: 2rem; 
   background-color: rgba(0, 0, 0, 0.864); 
   z-index: 1000;
   background-size: 10%;
+  text-align: end;
 }
 
 
 ul li a:hover {
-  color: #000000;
-  -webkit-text-stroke: 1px #ffffff;
+  color: #ffffff;
+  -webkit-text-stroke: 1px #00000000;
   transition: 0.5s;
 }
 

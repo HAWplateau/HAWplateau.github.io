@@ -15,7 +15,7 @@
     max-width: 100%;
     overflow: auto;
     margin: 10rem;
-    font-family: "FT88-Serif";
+    font-family: "Jakob";
     font-weight: 200;
   }
 
@@ -99,15 +99,14 @@
     font-size: 2rem;
     color: rgba(0, 255, 255, 0.52);
     padding: 0.5rem 1.2rem;
-    font-weight: 900;
     text-decoration: none;
     line-height: 2rem; 
-    background-color: rgba(0, 0, 0, 0.864); 
+    background-color: rgba(0, 0, 0, 0.864);
+    font-family: "jakob"; 
     z-index: 1000;
   }
   
   p{
-    font-family: "FT88-Serif";
     font-weight: 50;
     font-size: 2rem;
   }
