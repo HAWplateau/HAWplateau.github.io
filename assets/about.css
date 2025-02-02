@@ -77,11 +77,14 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    text-align: right;
+    letter-spacing: 1rem;
   }
   
   ul li {
     margin: 2;
     padding: 0;
+    text-align: right;
   }
   
   ul li a {
@@ -94,27 +97,26 @@
     margin-top: 0.8rem;
     margin-left: 0rem;
     color: transparent;
-    -webkit-text-stroke: 0.5px #000000;
+    -webkit-text-stroke: 0.5px #ffffff;
     background-position-y:top ;
     font-size: 2rem;
-    color: rgba(0, 255, 255, 0.52);
+    color: hsla(0, 0%, 100%, 0);
     padding: 0.5rem 1.2rem;
+    background-size: 1rem;
     text-decoration: none;
     line-height: 2rem; 
-    background-color: rgba(0, 0, 0, 0.864);
-    font-family: "jakob"; 
+    background-color: rgba(0, 0, 0, 0.864); 
     z-index: 1000;
+    background-size: 10%;
+    font-weight: 200;
+    text-align: right;
+    font-family: "Belgika";
   }
   
-  p{
-    font-weight: 50;
-    font-size: 2rem;
-  }
   
   ul li a:hover {
-    color: #000000;
-    -webkit-text-stroke: 1px #ffffff;
-    transition: 0.5s;
+    color: #ffffff;
+    -webkit-text-stroke: 1px #00000000;
   }
   
   ul li a:before,
@@ -123,7 +125,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    transition: 0.5s;
   }
   
   ul li a:hover:before {

@@ -1,41 +1,56 @@
 @font-face {
-  font-family: "Affigere";
-  src: url('./fonts/Affigere-Regular.woff') format('woff'),
-       url('./fonts/Affigere-Regular.woff2') format('woff2');
+  font-family: Affigere;
+  src: url(/assets/fonts/Affigere-Regular.woff) format('woff'),
+       url(/assets/fonts/Affigere-Regular.woff2) format('woff2');
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Bonbance";
-  src: url('./fonts/Bonbance-BoldCondensed.woff') format('woff'),
-       url('./fonts/Bonbance-BoldCondensed.woff2') format('woff');
+  font-family: Belgika;
+  src: url(/assets/fonts/belgika-5th-webfont.woff) format('woff'),
+       url(/assets/fonts/belgika-5th-webfont.ttf) format('ttf');
   font-weight: normal;
   font-style: normal;
 } 
 
 @font-face {
-  font-family: "Jakob";
-  src: url('./fonts/Jakob-Semi-Condensed.woff') format('woff'),
-       url('./fonts/Jakob-Semi-Condensed.woff2') format('woff2');
+  font-family: Jakob;
+  src: url(/assets/fonts/Jakob-Semi-Condensed.woff) format('woff'),
+       url(/assets/fonts/Jakob-Semi-Condensed.woff2) format('woff2');
   font-weight: normal;
   font-style: normal;
 } 
 
 @font-face {
-  font-family: "Caramel";
-  src: url('./fonts/Caramel-Regular.woff') format('woff'),
-       url('./fonts/Caramel-Regular.woff2') format('woff2');
+  font-family: Terminal;
+  src: url(/assets/fonts/terminal-grotesque-webfont.woff) format('woff'),
+       url(/assets/fonts/terminal-grotesque-webfont.woff2) format('woff2');
+  font-weight: 300;
+  font-style: Bold;
+} 
+
+@font-face {
+  font-family: Galgo-Bold;
+  src: url(/assets/fonts/Galgo-Bold.woff) format('woff'),
+       url(/assets/fonts/Galgo-Bold.woff2) format('woff2');
+  font-weight: 200;
+  font-style: 200;
+} 
+
+@font-face {
+  font-family: Galgo-Regular;
+  src: url(/assets/fonts/Galgo-Regular.woff) format('woff'),
+       url(/assets/fonts/Galgo-Regular.woff2) format('woff2');
   font-weight: normal;
   font-style: normal;
 } 
 
 @font-face {
-  font-family: "Belgika";
-  src: url('fonts/belgika-5th-webfont.eot'); /* EOT für ältere IE-Versionen */
-  src: url('fonts/belgika-5th-webfont.eot?#iefix') format('embedded-opentype'),
-       url('fonts/belgika-5th-webfont.woff') format('woff'),
-       url('fonts/belgika-5th-webfont.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+  font-family: CompagnonLight;
+  src:url(/assets/fonts/Compagnon-Light.woff) format("woff"),
+      url(/assets/fonts/Compagnon-Light.woff2) format("woff2");
+  font-weight:200;
+  font-style:normal;
 }
+
