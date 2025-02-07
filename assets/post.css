@@ -9,9 +9,17 @@ html {
 }
 
 body {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
   border-width: 0rem;
-  align-items: end;
-  justify-content: space-between;
+  align-items: start; 
+  justify-content: start; 
+  max-width: 100%;
+  font-family: Belgika;
+  font-weight: 200;
+  font-style: normal;
+  overflow: auto;
+  background-color: #000000;
 }
 
 .photos {
@@ -27,25 +35,10 @@ body {
   display: flex; 
   flex-wrap: wrap;
   flex-flow: wrap;
-  width: 90vw;     
-  height: 90vh;  
-  margin: 0rem; 
+  width: 95vw;     
+  height: 95vh;  
+  margin-bottom: 3rem; 
   object-fit: contain;
-
-}
-
-.overlay {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #008CBA;
-  z-index: 100;
-}
-
-.container:hover .overlay {
-  opacity: 1;
 }
 
 .text {
@@ -54,82 +47,95 @@ body {
   position: relative;
 }
 
-
-h2 {
-  margin-right: 0rem;
-  position: relative;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  font-family: "Terminal";
-  letter-spacing: 1rem;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: right;
-  letter-spacing: 1rem;
-}
-
-ul li {
-  margin: 2;
-  padding: 0;
-  text-align: right;
-}
-
-ul li a {
+.info-box {
   position: fixed;
-  margin-top: 1rem;
-  top: 0; 
-  left: 0;
-  width: fit-content; 
-  display: block;
-  margin-top: 0.8rem;
-  margin-left: 0rem;
-  color: transparent;
-  -webkit-text-stroke: 0.5px #ffffff;
-  background-position-y:top ;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 3rem;
+  background-color: #00000000;
+  color: white;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  text-align: left;
   font-size: 2rem;
-  color: hsla(0, 0%, 100%, 0);
-  padding: 0.5rem 1.2rem;
-  background-size: 1rem;
+  letter-spacing: 30px;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.info-box:hover {
+  width: 100vw;
+  height: 100vh;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
   text-decoration: none;
-  line-height: 2rem; 
-  background-color: rgba(0, 0, 0, 0.864); 
-  z-index: 1000;
-  background-size: 10%;
-  text-align: right;
+  z-index: 70;
+  background-color: #ffffff92; 
+}
+.info-box span {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  font-size: 2rem;
+  letter-spacing: -2px;
+  color: #000000;
+  margin-left: 2rem;
+  margin-top: 1%;
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  text-align: left;
+  font-size: 2rem;
+  letter-spacing: 30px;
+}
+.info-box:hover span {
+  opacity: 1;
+  margin-left: 1%;
+}
+.info-box:hover::before {
+  content: none;
+}
+.info-box::before {
+  content: "PLARTEAU";
+  transition: opacity 0.3s ease-in-out;
+  margin-left: 2rem;
+  margin-top: 1%;
+}
+.info-box:hover::before {
+  opacity: 0;
 }
 
+.info-box a{
+  margin-left: 2rem;
+  margin-top: 1%;
+  color: rgb(0, 0, 0);
+  
 
-ul li a:hover {
-  color: #ffffff;
-  -webkit-text-stroke: 1px #00000000;
 }
 
-ul li a:before,
-ul li a:after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-ul li a:hover:before {
-  color: #f00;
-  z-index: 1;
-  -webkit-text-stroke: 1px #000;
-  transform: translate(10px, -10px);
-}
-
-ul li a:hover:after {
-  color: #0ff;
-  z-index: 2;
-  -webkit-text-stroke: 1px #000;
-  transform: translate(20px, -20px);
+@media (max-width: 768px) {
+  .info-box {
+      width: 100vw;
+      height: 10vw;
+      font-size: 4vw;
+      letter-spacing: 3vw;
+  }
+  .info-box:hover {
+      width: 100vw;
+      height: 100vh;
+      justify-content: left;
+      align-items: center;
+      text-align: left;
+  }
+  .info-box span {
+      font-size: 4vw;
+  }
 }

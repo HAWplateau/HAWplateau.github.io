@@ -15,7 +15,7 @@ body {
   align-items: start; 
   justify-content: start; 
   max-width: 100%;
-  font-family: Galgo-Regular;
+  font-family: Belgika;
   font-weight: 200;
   font-style: normal;
   overflow: auto;
@@ -23,7 +23,6 @@ body {
 }
 
 main {
-  
   grid-column: 2; 
   height: fit-content; 
   width: 100%; 
@@ -39,27 +38,25 @@ main {
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: flex-end;
-  gap: 2px;
+  gap: 5px;
   position: relative;
   z-index: 3;
 }
-
 .photos img {
-  width: 300px;
+  width: 222px;
   height: auto;
   max-height: 550px;
   max-width: 650px;
   margin: -3.4rem;
   position: relative;
   object-fit: cover;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(0% 0%, 90% 0%, 90% 90%, 0% 90%);
   transition: transform 0.3s ease;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1 / 2;
   filter: grayscale(100%);
   background-color: rgb(0, 0, 0);
   z-index: 40; 
 }
-
 .photos img:hover{
   height: auto;
   display: flex;
@@ -73,32 +70,37 @@ main {
   position: fixed;
   margin: 0;
   scale: 1.4;
-  top: 25%;
-  left: 15%;
+  bottom: 250px;
+  left: 7%;
   z-index: 100;
   justify-content: center;
   align-items: center;
   clip-path: view-box;
   background-color: #ffffff;
+  margin-bottom: 7px;
 }
+
 
 .info-box {
   position: fixed;
-  top: 0;
-  left: 0;
+  bottom: 0%;
+  left: 0%;
   width: fit-content;
   height: 7rem;
-  background-color: #000000;
+  background-color: #00000078;
   color: white;
   display: flex;
   justify-content: left;
   align-items: center;
   transition: all 0.3s ease-in-out;
   overflow: hidden;
-  text-align: left;
+  text-align:start;
   font-size: 7rem;
   letter-spacing: 30px;
-  text-decoration: underline;
+  border-top: #ffffff;
+  border-top: solid;
+  padding-top: 22px;
+  z-index: 43;
 }
 .info-box:hover {
   width: 100vw;
@@ -108,16 +110,15 @@ main {
   text-align: left;
   text-decoration: none;
   z-index: 70;
-  opacity: 60%;
-  
+  background-color: #ffffff92;
 }
 .info-box span {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
-  font-size: 2.5rem;
-  letter-spacing: normal;
-  color: #ffffff;
-  margin-left: 1rem;
+  font-size: 2rem;
+  letter-spacing: -2px;
+  color: #000000;
+  margin-left: 3rem;
 }
 .info-box:hover span {
   opacity: 1;
@@ -126,8 +127,10 @@ main {
   content: none;
 }
 .info-box::before {
+  top: 0%;
   content: "PLARTEAU";
   transition: opacity 0.3s ease-in-out;
+  margin-left: 2rem
 }
 .info-box:hover::before {
   opacity: 0;
@@ -160,5 +163,5 @@ main {
     max-height: 333px;
     margin-left: 10px;
   
-}
+  }
 }
