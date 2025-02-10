@@ -15,7 +15,7 @@ body {
   align-items: start; 
   justify-content: start; 
   max-width: 100%;
-  font-family: Belgika;
+  font-family: FT88-E;
   font-weight: 200;
   font-style: normal;
   overflow: auto;
@@ -38,6 +38,7 @@ body {
   width: 95vw;     
   height: 95vh;  
   margin-bottom: 3rem; 
+  margin-right: -3rem; 
   object-fit: contain;
 }
 
@@ -47,9 +48,10 @@ body {
   position: relative;
 }
 
+
 .info-box {
   position: fixed;
-  top: 0%;
+  top: 2%;
   left: 0%;
   width: 100%;
   height: 3rem;
@@ -63,30 +65,40 @@ body {
   text-align: left;
   font-size: 2rem;
   letter-spacing: 30px;
-  text-decoration: underline;
+  text-decoration: none;
   text-decoration-thickness: 1px;
   text-underline-offset: 4px;
 }
 
 .info-box:hover {
-  width: 100vw;
-  height: 100vh;
+  position: fixed;
+  top: 2%;
+  left: 0%;
+  width: 100%;
+  height: 3rem;
+  background-color: #ffffff00;
+  color: rgb(255, 255, 255);
+  display: flex;
   justify-content: left;
   align-items: left;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
   text-align: left;
+  font-size: 2rem;
+  letter-spacing: 30px;
   text-decoration: none;
-  z-index: 70;
-  background-color: #ffffff92; 
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
 }
+
 .info-box span {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   font-size: 2rem;
   letter-spacing: -2px;
-  color: #000000;
+  color: #ffffff;
   margin-left: 2rem;
   margin-top: 1%;
-  color: rgb(0, 0, 0);
   display: flex;
   justify-content: left;
   align-items: left;
@@ -96,29 +108,53 @@ body {
   font-size: 2rem;
   letter-spacing: 30px;
 }
+
 .info-box:hover span {
   opacity: 1;
   margin-left: 1%;
 }
-.info-box:hover::before {
-  content: none;
-}
+
+/* Moving ART exactly 9.37rem to the right on hover */
 .info-box::before {
-  content: "PLARTEAU";
-  transition: opacity 0.3s ease-in-out;
-  margin-left: 2rem;
-  margin-top: 1%;
+  content: "ART";
+  transition: transform 0.3s ease-in-out;
+  display: inline-block;
 }
+
 .info-box:hover::before {
-  opacity: 0;
+  transform: translateX(9.37rem);
 }
 
-.info-box a{
-  margin-left: 2rem;
-  margin-top: 1%;
-  color: rgb(0, 0, 0);
-  
+/* Moving ART exactly 9.37rem to the right on hover */
+.info-box a::before {
+  transition: transform 0.3s ease-in-out;
+  display: inline-block;
+}
 
+.info-box a:hover::before {
+  transform:scaleX(3rem)
+}
+
+.info-box a {
+  position: fixed;
+  top: 2%;
+  left: 0%;
+  width: 100%;
+  height: 3rem;
+  background-color: #ffffff00;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  transition: all 2s ease-in;
+  overflow: hidden;
+  text-align: left;
+  font-size: 2rem;
+  letter-spacing: 30px;
+  text-decoration: none;
+  text-decoration-color: #ffffff;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
 }
 
 @media (max-width: 768px) {
