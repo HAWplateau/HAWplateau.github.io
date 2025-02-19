@@ -42,10 +42,26 @@ body {
   object-fit: contain;
 }
 
-.text {
-  color: rgb(255, 0, 0);
-  font-size: 20px;
-  position: relative;
+.zoom-container {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  display: none;
+}
+
+.zoom-container.show {
+  display: block;
+}
+
+.zoom-image {
+  position: absolute;
+  width: 1000px; /* High-res image size */
+  height: auto;
+  transition: transform 0.2s ease-in-out;
 }
 
 
